@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+ background: #2F4F4F
+}
+
+.notes-page {
+  width: 100%;
+  min-height: 100vh;
+  color: whitesmoke;
+}
+.notes-page header {
+  max-width: 100%;
+  /* max-width: 1920px; */
+  min-height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.notes-page header .logo {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+.notes-page header .logo:hover {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+.notes-page header ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 15px;
+}
+.notes-page header ul li a {
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.notes-page header ul li a:hover {
+  opacity: 1;
+}
+.notes-page section {
+  width: 100%;
+  box-shadow: 0 0 5px rgb(0, 4, 12);
+  padding: 20px 0;
+}
+.note-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+.card {
+  width: 300px;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  padding: 10px;
+  position: relative;
+  color: whitesmoke;
+  margin: 15px;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 0 5px rgb(232, 234, 238);
+  background: 0 0 5px rgb(198, 202, 211);
+}
+.card .close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-weight: 900;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+}
+.card h4 {
+  margin-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card .text-wrapper {
+  width: 100%;
+  /* height: 150px; */
+  /* start of replace height */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+  /* end of replace height */
+  margin: 10px 0;
+  color: #fff9;
+}
+.card .date {
+  text-align: right;
+  color: wheat;
+}
+.card-footer {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+/* ####################### create Note ################### */
+.create-note {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  border: 3px solid #000;
+  padding: 30px;
+}
+.create-note form {
+ margin: 10px;
+}
+/* .create-note:hover {
+  box-shadow: 0 0 5px rgb(232, 234, 238);
+  background: 0 0 5px rgb(198, 202, 211);
+} */
+.create-note h2 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.create-note .row {
+  width: 100%;
+  margin: 10px 0;
+}
+/* .create-note .button-row {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  width: 100%;
+} */
+.create-note input,
+.create-note button {
+  width: 100%;
+  height: 40px;
+  padding: 0 5px;
+}
+.create-note button {
+  background: rgb(162, 166, 173);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #000;
+  cursor: pointer;
+  opacity: 0.7;
+  outline: none;
+  border: none;
+}
+.create-note button:hover {
+  opacity: 1;
+}
+.create-note label {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.create-note textarea {
+  width: 100%;
+  resize: none;
+  padding: 0 5px;
+}
+
+/*################# login and register button center  #################*/
+.login-page .btn-center {
+  text-align: center;
+  display: block;
+  width: 492px;
+  color: white;
+  background: rgb(102, 8, 8);
+}
+.create-note .submit-btn-center {
+  text-align: center;
+  display: block;
+  width: 492px;
+  color: #111;
+  background: darkorange;
+}
+.create-note #edit-submit {
+  background: darkcyan !important;
+}
+
+
+/* media query */
+@media (max-width: 600px) {
+  .create-note {
+    padding: 15px;
+    width: 300px;
+    margin: auto;
+  }
+  /* .create-note input,
+  .create-note textarea,
+  .create-note button {
+    width: 95%;
+  } */
+  .notes-page header ul li a {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .notes-page header .logo {
+    font-size: 0.8rem;
+  }
+  .create-note h2 {
+    font-size: 1rem;
+  }
+  .create-note label {
+    font-size: 0.8rem;
+  }
+  .login-page .btn-center {
+    width: 293px;
+  }
+  .create-note .submit-btn-center {
+    width: 293px;
+  }
+}
+
+
+/* ############## login page ################### */
+.login-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.login input,
+.register input {
+  margin-bottom: 15px;
+}
+.login,
+.register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2F4F4F;
+}
+.login-page h2 {
+  text-align: center;
+}
+.login-page h2,
+.login-page h3 {
+  color: #fff8
+}
+.login-page h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 15px;
+  color: #000;
+}
+.login-page p {
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+}
+.login-page span {
+  color: white;
+  cursor: pointer;
+}
+.login-page span:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+
+
+/* media query */
+@media (max-width: 600px) {
+    .login-page h3 {
+      font-size: 1rem;
+    }
+    .login-page h2,
+    .login-page h3 {
+    font-size: 0.8rem;
+  }
+  .login-page p, 
+  span {
+    font-size: 0.7rem;
+  }
+  
+}
